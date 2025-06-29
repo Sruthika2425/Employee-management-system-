@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head><title>Employee Form</title></head>
+<body>
+  <h2>{{ 'Edit' if employee else 'Add' }} Employee</h2>
+  <form method="POST">
+    <input type="text" name="name" placeholder="Name" value="{{ employee.name if employee else '' }}" required><br><br>
+    <input type="email" name="email" placeholder="Email" value="{{ employee.email if employee else '' }}" required><br><br>
+    <input type="text" name="department" placeholder="Department" value="{{ employee.department if employee else '' }}" required><br><br>
+    <button type="submit">Submit</button>
+  </form>
+  <br>
+  <a href="/dashboard">Back to Dashboard</a>
+</body>
+</html>
